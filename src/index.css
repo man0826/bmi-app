@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    background-color: #f9fafc;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-family: "notoSans";
+  }
+
+  input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px rgb(255, 255, 255) inset !important;
+    -webkit-text-fill-color: #000 !important;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "notoSans";
+  src: url("./assets/fonts/NotoSansJP-Regular.otf") format("opentype");
 }
